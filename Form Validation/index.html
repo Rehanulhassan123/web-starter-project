@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b6d887a1f1.js" crossorigin="anonymous"></script>
+    <script src="./script.js" defer></script>
+    <title>Form Validation</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="" >
+            <i class="fas fa-paper-plane"></i>
+            <div class="formGroup">
+                <label for="name">  Name.</label>
+                <input type="text" id="name" class="fullName" placeholder="Enter Your Name" onkeyup="validateName()">
+                <span class="nameError"></span>
+            </div>
+            <div class="formGroup">
+                <label for="phoneno">Phone No.</label>
+                <input type="text" id="phone" class="Phoneno" placeholder="0333 1215 881" onblur="validatePhone()" >
+                <span class="phoneError"></span>
+            </div>
+            <div class="formGroup">
+                <label for="email">Email Id.</label>
+                <input type="email" id="mail" class="mail" placeholder="Enter Your Email" onblur="validateMail()">
+                <span class="mailError"></span>
+            </div>
+            <div class="formGroup">
+                <label for="message">Message.</label>
+                <textarea name="message" id="message"  cols="10" rows="5"
+                    placeholder="Enter Your Message" onkeyup="validateMsg()"></textarea>
+                <span class="msgError"></span>
+            </div>
+            <button type="submit" class="submit" onclick="return validateForm()">Submit</button>
+            <span class="submitError" ></span>
+        </form>
+    </div>
+    
+
+</body>
+
+</html>
